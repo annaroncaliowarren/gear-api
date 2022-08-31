@@ -20,7 +20,7 @@ namespace Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=192.168.0.43; Port=5435; Database=db_gear; UserId=postgres; Password=123456");
+            optionsBuilder.UseNpgsql("Host=zuplae.vps-kinghost.net; Port=5443; Database=db_gear; UserId=postgres; Password=123456");
         }
     }
 }

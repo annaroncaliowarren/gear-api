@@ -15,6 +15,7 @@ namespace Data.Model
         public int Quantity { get; set; }
         [Column(TypeName = "BYTEA")]
         public byte[] Image { get; set; }
-        public CategoryModel Category { get; set; }
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
     }
 }

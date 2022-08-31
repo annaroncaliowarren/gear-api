@@ -13,7 +13,7 @@ namespace Data.Model
     {
         public string Name { get; set; }
         public string Cpf { get; set; }
-        public DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
         public string Company { get; set; }
         public string Cnpj { get; set; }
         public string? Telephone { get; set; }
