@@ -11,9 +11,9 @@ namespace GearApi.Controllers
     {
         private R repository;
 
-        public GenericController(R repository)
+        public GenericController()
         {
-            this.repository = repository;
+            this.repository = Activator.CreateInstance<R>();
         }
 
         [HttpGet]

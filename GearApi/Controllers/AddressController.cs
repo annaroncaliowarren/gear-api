@@ -7,8 +7,5 @@ namespace GearApi.Controllers
 {
     public class AddressController : GenericController<AddressModel, AddressRepository>
     {
-        public AddressController() : base(new AddressRepository())
-        {
-        }
     }
 }

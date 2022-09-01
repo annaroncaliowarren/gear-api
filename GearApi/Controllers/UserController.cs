@@ -7,8 +7,5 @@ namespace GearApi.Controllers
 {
     public class UserController : GenericController<UserModel, UserRepository>
     {
-        public UserController() : base(new UserRepository())
-        {
-        }
     }
 }

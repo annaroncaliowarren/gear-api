@@ -1,4 +1,6 @@
-﻿using Data.Model;
+﻿using Data.Context;
+using Data.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +11,16 @@ namespace Data.Repository
 {
     public class CategoryRepository : BaseRepository<CategoryModel>
     {
+        public override List<CategoryModel> GetAll()
+        {
+            List<CategoryModel> products = new List<CategoryModel>();
+
+            using (GearContext context = new GearContext())
+            {
+                products = context.Category.Include("Products").ToList();
+            }
+
+            return products;
+        }
     }
 }

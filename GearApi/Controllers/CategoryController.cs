@@ -7,8 +7,5 @@ namespace GearApi.Controllers
 {
     public class CategoryController : GenericController<CategoryModel, CategoryRepository>
     {
-        public CategoryController() : base(new CategoryRepository())
-        {
-        }
     }
 }

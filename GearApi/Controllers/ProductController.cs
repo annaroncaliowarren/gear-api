@@ -7,8 +7,5 @@ namespace GearApi.Controllers
 {
     public class ProductController : GenericController<ProductModel, ProductRepository>
     {
-        public ProductController() : base(new ProductRepository())
-        {
-        }
     }
 }

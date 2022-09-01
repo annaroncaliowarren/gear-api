@@ -13,5 +13,6 @@ namespace Data.Model
         public string Name { get; set; }
         [Column(TypeName = "BYTEA")]
         public byte[] Image { get; set; }
+        public ICollection<ProductModel>? Products { get; set; }
     }
 }

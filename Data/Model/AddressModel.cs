@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Data.Model
@@ -14,7 +15,11 @@ namespace Data.Model
         public int Number { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        [ForeignKey("User")]
         public int UserId { get; set; }
+
+        [JsonIgnore]
+
+        [ForeignKey("UserId")]
+        public UserModel? User { get; set; }
     }
 }
