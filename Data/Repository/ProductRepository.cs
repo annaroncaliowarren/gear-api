@@ -22,5 +22,18 @@ namespace Data.Repository
 
             return list;
         }
+
+        public List<ProductModel> GetByCategory(int categoryId)
+        {
+            List<ProductModel> list = new List<ProductModel>();
+
+            using (GearContext context = new GearContext())
+            {
+                list = context.Product.Where(p => p.CategoryId == categoryId).ToList();
+            }
+
+            return list;
+
+        }
     }
 }

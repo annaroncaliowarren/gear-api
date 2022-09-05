@@ -13,12 +13,8 @@ namespace Data.Model
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public string Payment { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
         public int ProductId { get; set; }
-
-        [JsonIgnore]
-
-        [ForeignKey("ProductId")]
         public ProductModel? Product { get; set; }
     }
 }
