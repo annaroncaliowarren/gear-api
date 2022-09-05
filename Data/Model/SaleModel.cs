@@ -16,5 +16,8 @@ namespace Data.Model
         public string Date { get; set; }
         public int ProductId { get; set; }
         public ProductModel? Product { get; set; }
+        public int UserId { get; set; }
+        [JsonIgnore]
+        public UserModel? User { get; set; }
     }
 }

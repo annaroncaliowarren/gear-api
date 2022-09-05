@@ -22,5 +22,17 @@ namespace Data.Repository
 
             return list;
         }
+
+        public List<SaleModel> GetByUserId(int id)
+        {
+            List<SaleModel> sales = new List<SaleModel>();
+
+            using (GearContext context = new GearContext())
+            {
+                sales = context.Sale.Include("Product").Include("User").Where(s => s.UserId == id).ToList();
+            }
+
+            return sales;
+        }
     }
 }
